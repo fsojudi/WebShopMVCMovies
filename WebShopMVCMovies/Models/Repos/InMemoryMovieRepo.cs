@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace WebShopMVCMovies.Models.Repos
 {
-    public class InMemoryPeopleRepo : IMovieRepo
+    public class InMemoryMovieRepo : IMovieRepo
     {
         private static List<Movie> movieList = new List<Movie>();
         private static int idCounter = 0;

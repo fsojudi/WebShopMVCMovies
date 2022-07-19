@@ -7,5 +7,10 @@ namespace WebShopMVCMovies.Models.ViewModels
 {
     public class DirectorViewModel
     {
+        public List<Director> Directors { get; set; }
+
+
+        public DirectorViewModel() { Directors = new List<Director>(); }
     }
 }
+

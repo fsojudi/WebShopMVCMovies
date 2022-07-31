@@ -1,0 +1,20 @@
+﻿@model Movie
+
+<h1>Movie Details</h1>
+<div class="row font-weight-bold mt-3 d-flex-column align-items-sm-stretch">
+
+    <div class="col-5 mt-2">Name</div>
+    <div class="col-5 mt-2">Genre</div>
+    <div class="col-2 mt-2">Director</div>
+    <div class="col-5 mt-2">Price</div>
+
+
+</div>
+<div class="row">
+    <div class="col-5 mt-2">@Model.Name</div>
+    <div class="col-5 mt-2">@Model.Genre</div>
+    <div class="col-2 mt-2">@Model.Director.DirectorName</div>
+    <div class="col-5 mt-2">@Model.Price</div>
+
+</div>
+<a asp-action="Movie" class="btn btn-info mt-3 mr-2"></a>

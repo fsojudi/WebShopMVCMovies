@@ -1,0 +1,9 @@
+﻿@model Movie
+
+<div id="@("movieId"+Model.Id)" class="row">
+    <div class="col-5">@Model.Name</div>
+    <div class="col-5 mt-2">@Model.Genre </div>
+    <div class="col-2 mt-2">@Model.Director </div>
+    <div class="col"><button onclick="getSpaWithAjax('@Url.Action("SpaMovieDetails","AjaxMovie",new { id = Model.Id })','@("movieId" + Model.Id)')" class="btn btn-dark">Details</button></div>
+
+</div>

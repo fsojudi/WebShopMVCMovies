@@ -24,12 +24,12 @@ namespace WebShopMVCMovies.Data
 
 
 
-            modelBuilder.Entity<MovieLanguage>() 
-                .HasOne(dtk => dtk.movie)
+            modelBuilder.Entity<MovieLanguage>() // One Movie to Many Languages
+                .HasOne(dtk => dtk.Movie)
                 .WithMany(dt => dt.MovieLanguages)
                 .HasForeignKey(dtk => dtk.MovieId);
 
-            modelBuilder.Entity<MovieLanguage>()  
+            modelBuilder.Entity<MovieLanguage>()  // One Language to Many Movie
                 .HasOne(dtk => dtk.Language)
                 .WithMany(dt => dt.MovieLanguages)
                 .HasForeignKey(dtk => dtk.LanguageId);

@@ -43,7 +43,7 @@ namespace WebShopMVCMovies.Controllers
             movie.Director.Country.Directors = null;
             foreach (var item in movie.MovieLanguages)
             {
-                item.movie.MovieLanguages = null;
+                item.Movie.MovieLanguages = null;
                 if (item.Language != null)
                 {
                     item.Language.MovieLanguages = null;

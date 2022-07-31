@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Single page Movies with Ajax</h1>
+
+<button class="btn-dark" onclick="ajaxMovieList('@Url.Action("PartialViewMovie", "Movie")')">Get Movies list</button>
+<div class="row"></div>
+<br />
+<div class="form-group col-sm-11">
+    <input class="form-control " type="number" name="id" id="idInput" placeholder="Movie Id" />
+</div>
+<button class="btn-dark" onclick="ajaxPost('@Url.Action("PartialViewDetails","Movie")', 'idInput')">Details</button>
+<button class="btn-dark" onclick="ajaxPost('@Url.Action("AjaxDelete","Movie")', 'idInput')">Delete</button>
+<br />
+
+<div id="result"></div>
+<hr />
+
+<h2>SPA Singel page version 0.1.01</h2>
+
+<div id="spaMovieList"></div>
+
+<script>
+    window.addEventListener("load", () => {
+        console.log("load triggerd");
+        getSpaWithAjax('AjaxMovie/SpaMovieList', 'spaMovieList');/* For loding ajax functions*/
+    });
+
+</script>

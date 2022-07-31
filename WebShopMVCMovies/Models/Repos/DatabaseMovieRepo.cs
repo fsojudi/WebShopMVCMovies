@@ -9,10 +9,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace WebShopMVCMovies.Data
 {
-    public class DatabasMovieRepo : IMovieRepo
+    public class DatabaseMovieRepo : IMovieRepo
     {
         readonly MovieDbContext _movieDbContext;
-        public DatabasMovieRepo(MovieDbContext movieDbContext)
+        public DatabaseMovieRepo(MovieDbContext movieDbContext)
         {
             _movieDbContext = movieDbContext;
         }

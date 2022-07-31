@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Director>
+@*@model List<Director>*@
+@{
+    ViewData["Title"] = "Director Index";
+}
+
+<h1>City list</h1>
+<a asp-action="Create" class="btn btn-primary mt-4 mb-4">Add new Director</a>
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th></th>
+            @*<th>Director</th>*@
+            <th>@Html.DisplayNameFor(model => model.Id)</th>
+            @*<th>Country</th>*@
+            <th>@Html.DisplayNameFor(model => model.DirectorName)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+        <tr>
+            @*<td>@item.DirectorId</td>
+        <td>@item.DirectorName</td>
+        <td>@item.Country.CountryName</td>*@
+            <td>@Html.DisplayFor(modelItem => item.Id)</td>
+            <td>@Html.DisplayFor(modelItem => item.DirectorName)</td>
+            <td>@Html.DisplayFor(modelItem => item.Country.CountryName)</td>
+            <td>
+              
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id })|
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })|
+            </td>
+
+
+        </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,24 @@
+﻿@model Movie
+
+
+<div id="@("movieId"+Model.Id)" class="row">
+    <h2>Movie Details</h2>
+    <div class="row ">
+        <div class="col-3 mt-2">Movie Name</div>
+        <div class="col-3 mt-2">Genre</div>
+        <div class="col-3 mt-2">Director</div>
+        <div class="col-3 mt-2">Price</div>
+        <div class="col-3 mt-2">id</div>
+    </div>
+    <div class="row">
+        <div class="col-3 mt-2">@Model.Name</div>
+        <div class="col-3 mt-2">@Model.Genre</div>
+        <div class="col-3 mt-2">@Model.Director</div>
+        <div class="col-3 mt-2">@Model.Price</div>
+        <div class="col-3 mt-2">@Model.Id</div>
+    </div>
+    <div class="col">
+        <button onclick="getSpaDeleteWithAjax('@Url.Action("SpaAjaxDelete","AjaxMovie", new { id = Model.Id })', '@("movieId" + Model.Id)')" class="btn btn-dark">Delete</button>
+        <button onclick="getSpaWithAjax('@Url.Action("SpaMovieRow","AjaxMovie", new { id = Model.Id })', '@("movieId" + Model.Id)')" class="btn btn-dark">Close</button>
+    </div>
+</div>

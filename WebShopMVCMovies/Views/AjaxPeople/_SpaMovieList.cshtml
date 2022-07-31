@@ -1,0 +1,12 @@
+﻿@model List<Movie>
+
+<div class="row font-weight-bold mt-3">
+    <div class="col-4">Name</div>
+    <div class="col-4">Director</div>
+    <div class="col-4">Id</div>
+</div>
+
+@foreach (Movie movie in Model)
+{
+    <partial name="_SpaMovieRow" model="movie" />
+}

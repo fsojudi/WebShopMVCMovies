@@ -16,7 +16,6 @@ namespace WebShopMVCMovies.Data
             UserManager<AppUser> userManager)
         {
             context.Database.EnsureCreated();
-            
 
             if (context.Roles.Any())
             {
@@ -26,6 +25,7 @@ namespace WebShopMVCMovies.Data
                 {
                     ErrorMessages(result);
                 }
+                //seed in the following into the Db SuperAdmin
                 AppUser appUser = new AppUser
                 {
                     FirstName = "Super",
@@ -41,6 +41,7 @@ namespace WebShopMVCMovies.Data
                 }
                 userManager.AddToRoleAsync(appUser, role.Name).Wait();
             }
+            //seed in the following into the Db SuperAdmin
             if (!context.Roles.Any(role => role.Name == "Admin"))
             {
                 IdentityRole roleA = new IdentityRole("Admin");
@@ -50,6 +51,7 @@ namespace WebShopMVCMovies.Data
                 {
                     ErrorMessages(resultA);
                 }
+                //add user to role
                 AppUser appUser = new AppUser
                 {
                     FirstName = "Admina",

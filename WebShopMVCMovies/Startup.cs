@@ -45,7 +45,6 @@ namespace WebShopMVCMovies
             });
 
             // Step 6
-            //services.AddScoped<IPeopleRepo, InMemoryPeopleRepo>();
             services.AddScoped<IMovieRepo, DatabaseMovieRepo>();// IoC & DI
             services.AddScoped<IMovieService, MovieService>();// IoC & DI
 

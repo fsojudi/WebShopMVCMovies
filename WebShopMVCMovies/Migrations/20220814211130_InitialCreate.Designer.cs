@@ -10,7 +10,7 @@ using WebShopMVCMovies.Data;
 namespace WebShopMVCMovies.Migrations
 {
     [DbContext(typeof(MovieDbContext))]
-    [Migration("20220727172848_InitialCreate")]
+    [Migration("20220814211130_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

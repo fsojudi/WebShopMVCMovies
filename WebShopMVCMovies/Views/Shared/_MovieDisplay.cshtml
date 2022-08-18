@@ -7,13 +7,16 @@
             <td>@Model.Name</td>
             <td>@Model.Director.Country.CountryName</td>
             <td>@Model.Director.DirectorName</td>
+            <td>@Model.Genre</td>
+            <td>@Model.Price</td>
+
 
             <td>
                 <a asp-action="Edit" asp-controller="Movie" asp-route-id="@Model.Id" class="mr-2 text-warning">Edit</a>
                 <a asp-action="Details" asp-controller="Movie" asp-route-id="@Model.Id" class="mr-2 text-info">Details</a>
                 <a asp-action="Delete" asp-controller="Movie" asp-route-id="@Model.Id" class="mr-2 text-danger">Delete</a>
             </td>
-           
+
         </tr>
     </thead>
 </table>

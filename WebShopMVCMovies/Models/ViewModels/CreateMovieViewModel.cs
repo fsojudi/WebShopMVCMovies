@@ -20,6 +20,8 @@ namespace WebShopMVCMovies.Models.ViewModels
         [Display(Name = "Director")]
         [Required]
         public int DirectorId { get; set; }
+        [Display(Name = "Price")]
+        public string Price { get; set; }
 
         public List<Director> Directors { get; set; }
     }

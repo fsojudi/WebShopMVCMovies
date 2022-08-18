@@ -78,7 +78,8 @@ namespace WebShopMVCMovies.Controllers
             {
                 Name = movie.Name,
                 Genre = movie.Genre,
-                DirectorId = movie.Id
+                DirectorId = movie.Id,
+                Price =movie .Price 
             };
             editMovie.Directors = _directorService.GetAll();
             ViewBag.Id = id;

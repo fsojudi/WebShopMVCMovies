@@ -50,6 +50,7 @@ namespace WebShopMVCMovies.Models.Repos
                 orgMovie.Name = movie.Name;
                 orgMovie.Genre = movie.Genre;
                 orgMovie.Director = movie.Director;
+                orgMovie.Price = movie.Price;
 
                 return true;
             }

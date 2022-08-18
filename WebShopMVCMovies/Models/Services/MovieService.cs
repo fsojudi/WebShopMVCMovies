@@ -29,7 +29,8 @@ namespace WebShopMVCMovies.Models.Services
             {
                 Name = createMovie.Name,
                 Genre = createMovie.Genre,
-                DirectorId = createMovie.DirectorId
+                DirectorId = createMovie.DirectorId,
+                Price = createMovie.Price 
             };
             _movieRepo.Create(movie);
             return movie;
@@ -70,6 +71,7 @@ namespace WebShopMVCMovies.Models.Services
                 movie.Name = editMovie.Name;
                 movie.DirectorId = editMovie.DirectorId;
                 movie.Genre = editMovie.Genre;
+                movie.Price = editMovie.Price;
             }
             return _movieRepo.Update(movie);
         }
